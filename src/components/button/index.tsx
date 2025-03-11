@@ -1,12 +1,9 @@
 import React from 'react';
+import './style.scss';
 
 function Button() {
-    const backgroundColor = 'green';
-    const styles = {
-        backgroundColor
-    }
     return (
-        <button style={styles}>
+        <button className='button'>
             Button
         </button>
     )
