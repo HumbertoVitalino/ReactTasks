@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import style from './list.module.scss';
 import Item from './item';
 import { ITask } from '../../types/task';
