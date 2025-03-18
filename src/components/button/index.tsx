@@ -1,12 +1,19 @@
-import React from 'react';
-import style from './button.module.scss';
+import React from "react";
+import style from "./button.module.scss";
 
-function Button({button}: {button: string}) {
+class Button extends React.Component<{
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
+  children?: React.ReactNode;
+}> {
+  render() {
+    const { type = "button", onClick, children } = this.props;
     return (
-        <button className={style.button}>
-            {button}
-        </button>
-    )
+      <button onClick={onClick} type={type} className={style.button}>
+        {children}
+      </button>
+    );
+  }
 }
 
 export default Button;
