@@ -7,16 +7,28 @@ import { timeForSeconds } from "../../common/utils/time";
 
 interface Props {
     selected: ITask | undefined
+    endTask: () => void
 }
 
-export default function Timer({ selected }: Props) {
+export default function Timer({ selected, endTask }: Props) {
     const [time, setTime] = useState<number>();
 
     useEffect(() => {
         if(selected?.time) {
             setTime(timeForSeconds(selected.time))
         }
-    },[selected])
+    },[selected]);
+
+    function regressive(counter: number = 0) {
+        setTimeout(() => {
+            if(counter > 0) {
+                setTime(counter - 1);
+                return regressive(counter - 1);
+            }
+            endTask();
+        }, 1000);
+    }
+
     return (
         <div className={style.timer}>
             <p className={style.title}>Choose your card and start the timer.</p>
@@ -24,8 +36,8 @@ export default function Timer({ selected }: Props) {
             <div className={style.watchWrapper}>
                 <Watch time={time}/>
             </div>
-            <Button>
-                button='start'
+            <Button onClick={() => regressive(time)}>
+                start!
             </Button>
         </div>
     )
