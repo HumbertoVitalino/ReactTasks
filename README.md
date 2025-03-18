@@ -1,16 +1,32 @@
-# Task Management App  
+# 📌 ReactTasks
 
-This is a **React**-based task management application developed as part of an **Alura** course. It allows users to create, edit, and delete tasks, helping with daily organization.  
+ReactTasks is a simple task management application built with **React**. Designed for learning purposes, this project allows users to add, and complete tasks intuitively.
 
-## 🚀 Technologies Used  
-- **React**  
-- **JavaScript/TypeScript** (depending on implementation)  
-- **Styled Components / CSS Modules / Tailwind** (depending on the styling approach)  
-- **Context API / Redux** (if state management is used)  
+## 🚀 Features
+- Add new tasks with estimated time.
+- Mark tasks as completed.
 
-## 🎯 Features  
-- 📌 **Add tasks**  
-- ✅ **Mark tasks as completed**  
-- ✏️ **Edit tasks**  
-- ❌ **Delete tasks**  
-- 🔍 **Filter tasks (pending/completed)**  
+## 🛠 Technologies Used
+- **React** with TypeScript  
+- **SCSS** for styling  
+- **UUID** for unique identifier generation  
+
+## 📦 Installation
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/humbertovitalino/reacttasks.git
+   ```
+2. Navigate to the project folder:  
+   ```bash
+   cd reacttasks
+   ```
+3. Install dependencies:  
+   ```bash
+   npm install
+   ```
+4. Start the project:  
+   ```bash
+   npm start
+   ```
+
+---
