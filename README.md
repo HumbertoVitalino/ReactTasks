@@ -22,7 +22,7 @@ ReactTasks is a simple task management application built with **React**. Designe
    ```
 3. Install dependencies:  
    ```bash
-   npm install
+   npm i
    ```
 4. Start the project:  
    ```bash
